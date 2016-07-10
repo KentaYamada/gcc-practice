@@ -10,7 +10,8 @@ int main(int argc, char *argv[])
     int i;
 
     if(argc < 2) {
-        fprintf(stderr, "file not exitst.");
+        fprintf(stderr, "file not exitst.\n");
+        exit(EXIT_FAILURE);
     }
 
     for(i = 1; i < argc; i++) {
