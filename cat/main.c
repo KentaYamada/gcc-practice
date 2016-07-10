@@ -22,14 +22,14 @@ int main(int argc, char *argv[])
     //check command line argument
     if(argc < 2) {
         fprintf(stderr, "%s: file not exist.\n", argv[0]);
-        exit(1);
+        exit(EXIT_FAILURE);
     }
 
     for(i = 1; i < argc; i++) {
         do_cat(argv[i]);
     }
 
-    exit(0);
+    exit(EXIT_SUCCESS);
 }
 
 //
@@ -68,5 +68,5 @@ static void do_cat(const char *path)
 static void die(const char *path)
 {
     perror(path);
-    exit(1);
+    exit(EXIT_FAILURE);
 }
